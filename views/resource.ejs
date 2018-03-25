@@ -22,7 +22,7 @@
     <div class="element-card">
       <div class="front-facing">
         <h1 class="carbon"><img src = "co2.png" height = "40px" width = "auto"></h1>
-        <p class="treeTitle">Carbon DiOxide</p>
+        <p class="treeTitle">Carbon Dioxide</p>
         <p class="treeTitle2" id = "myTargetElement"></p>
       </span>
     </div>
@@ -63,26 +63,26 @@
 <script src="js/countUp.js"></script>
 <script>
   var options = {
-  useEasing: true, 
-  useGrouping: true, 
-  separator: ',', 
-  decimal: '.', 
+  useEasing: true,
+  useGrouping: true,
+  separator: ',',
+  decimal: '.',
 };
-var demo = new CountUp('myTargetElement', 0, 2, 3, 2.5, options);
+var demo = new CountUp('myTargetElement', 0, <%= data.carbon %>, 3, 2.5, options);
 if (!demo.error) {
   demo.start();
 } else {
   console.error(demo.error);
 }
 
-var demo2 = new CountUp('myTargetElement2', 0, 4, 3, 2.5, options);
+var demo2 = new CountUp('myTargetElement2', 0, <%= data.trees %>, 3, 2.5, options);
 if (!demo2.error) {
   demo2.start();
 } else {
   console.error(demo2.error);
 }
 
-var demo3 = new CountUp('myTargetElement3', 0, 6, 3, 2.5, options);
+var demo3 = new CountUp('myTargetElement3', 0, <%= data.water %>, 3, 2.5, options);
 if (!demo3.error) {
   demo3.start();
 } else {
