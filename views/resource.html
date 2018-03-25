@@ -23,7 +23,7 @@
       <div class="front-facing">
         <h1 class="carbon"><img src = "co2.png" height = "40px" width = "auto"></h1>
         <p class="treeTitle">Carbon DiOxide</p>
-        <p class="treeTitle2">69</p>
+        <p class="treeTitle2" id = "myTargetElement"></p>
       </span>
     </div>
     <div class="back-facing">
@@ -36,7 +36,7 @@
     <div class="front-facing">
       <h1 class="tree"><img src = "tree.png" height = "100" width = "100"></img></h1>
       <p class="treeTitle">Trees</p>
-      <p class="treeTitle2">69</p>
+      <p class="treeTitle2" id = "myTargetElement2"></p>
     </div>
     <div class="back-facing">
       <p>Silver is the metallic element with the atomic number 47. Its symbol is Ag, from the Latin argentum, derived from the Greek ὰργὀς, and ultimately from a Proto-Indo-European language root reconstructed as *h2erǵ-, "grey" or "shining".</p>
@@ -48,7 +48,7 @@
     <div class="front-facing">
       <h1 class="water"><img src = "h2o.png" height = "80px" width = "auto"></h1>
       <p class="treeTitle">Water</p>
-      <p class="treeTitle2">69</p>
+      <p class="treeTitle2" id = "myTargetElement3"></p>
     </div>
     <div class="back-facing">
       <p>Gold is a chemical element with symbol Au and atomic number 79. In its purest form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal. Chemically, gold is a transition metal and a group 11 element.</p>
@@ -60,6 +60,36 @@
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script  src="js/result.js"></script>
+<script src="js/countUp.js"></script>
+<script>
+  var options = {
+  useEasing: true, 
+  useGrouping: true, 
+  separator: ',', 
+  decimal: '.', 
+};
+var demo = new CountUp('myTargetElement', 0, 2, 3, 2.5, options);
+if (!demo.error) {
+  demo.start();
+} else {
+  console.error(demo.error);
+}
+
+var demo2 = new CountUp('myTargetElement2', 0, 4, 3, 2.5, options);
+if (!demo2.error) {
+  demo2.start();
+} else {
+  console.error(demo2.error);
+}
+
+var demo3 = new CountUp('myTargetElement3', 0, 6, 3, 2.5, options);
+if (!demo3.error) {
+  demo3.start();
+} else {
+  console.error(demo3.error);
+}
+
+</script>
 
 </body>
 
