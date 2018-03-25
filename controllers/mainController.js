@@ -6,6 +6,7 @@ module.exports = function(app) {
   })
   app.post('/index',urlencodedParser, function(req, res) {
     console.log(req.body);
+    res.render('index');
     // console.log(req.body.paper);
   })
 }
