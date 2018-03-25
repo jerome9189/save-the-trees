@@ -63,7 +63,7 @@
   <div class="card text-white bg-primary mb-3 d-inline-block marg containerAni" style="max-width: 20rem;">
     <div class="card-header main-header">Wastage of</div>
     <div class="card-body">
-      <h1 id = "water" class="card-title main-number">69.69</h1>
+      <h1 id = "water" class="card-title main-number"><%= data.stats.water %></h1>
       <div class="main-unit">gallons of</div>
     </div>
     <div class="card-header main-header">Water<i class="em em-droplet"></i></div>
@@ -76,7 +76,7 @@
   <div class="card text-white bg-success mb-3 d-inline-block marg containerAni" style="max-width: 20rem;">
     <div class="card-header main-header">Cutting of</div>
     <div class="card-body">
-      <h1 id="trees" class="card-title main-number" style = "font-size: 110px" >69.69</h1>
+      <h1 id="trees" class="card-title main-number" style = "font-size: 110px" ><%= data.stats.trees %></h1>
     </div>
     <div class="card-header main-header">Trees<i class="em em-evergreen_tree"></i></div>
     <div class="overlay" style="background-color:Green">
@@ -88,7 +88,7 @@
   <div class="card text-white bg-dark mb-3 d-inline-block marg containerAni" style="max-width: 20rem;">
     <div class="card-header main-header">Emissions of</div>
     <div class="card-body">
-      <h1 id="carbon" class="card-title main-number">69.69</h1>
+      <h1 id="carbon" class="card-title main-number"><%= data.stats.carbon %></h1>
 
       <div class="main-unit">lb of</div>
     </div>
@@ -99,9 +99,10 @@
     </div>
   </div>
 </div>
-<h2 style="text-align:center">Yolo this number boi <span class="badge badge-primary">Primary</span></h2>
-<h2 style="text-align:center">Yolo this number boi <span class="badge badge-success">Primary</span></h2>
-<h2 style="text-align:center">Yolo this number boi <span class="badge badge-dark">Primary</span></h2>
+<h2 style="text-align:center">Average water savings per person: <span class="badge badge-primary"><%= data.avgStats.water %></span></h2>
+<h2 style="text-align:center">Average number of trees saved per person: <span class="badge badge-success"><%= data.avgStats.trees %></span></h2>
+<h2 style="text-align:center">Average carbon emissions prevented per person: <span class="badge badge-dark"><%= data.avgStats.carbon %></span></h2>
+<h5 style="text-align:center">Averages were last reset at <%= data.timestamp %></h5>
 
 <h4 style="text-align:center; margin: 6%">Of course, these are only a REALLYYY tiny fraction of the different things one can do to help the environment. We plan to continue adding more activites throughout the development phase. #sustainability</h4>
 <div class="quote">

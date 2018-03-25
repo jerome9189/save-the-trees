@@ -17,9 +17,8 @@ module.exports = function(app) {
                 "water" : (parseFloat(parseFloat(avgStats.water) + parseFloat(stats.water))/parseFloat(count)).toFixed(precision),
                 "carbon" : (parseFloat(parseFloat(avgStats.carbon) + parseFloat(stats.carbon))/parseFloat(count)).toFixed(precision),
               };
-    console.log(avgStats);
-    console.log(currentTime.toLocaleString());
-    res.render('resource', {data : stats});
+    var json = {"avgStats" : avgStats, "stats" : stats, "timestamp" : currentTime.toLocaleString()};
+    res.render('resource', {data : json});
     // console.log(req.body.paper);
   });
   var map = {
