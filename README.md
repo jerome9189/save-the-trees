@@ -12,3 +12,10 @@ npm install
 node index.js
 
 go to localhost:3000/index
+
+## Contributors
+  * **Jerome George**
+  * **Kartik Arora**
+  * **Pranay Mundra**
+  
+  
