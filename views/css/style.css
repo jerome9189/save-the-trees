@@ -90,6 +90,23 @@ body {
   margin: 20px;
   border-radius: 15px !important;
 }
+.hoverable {
+    cursor:default;
+    color:#000;
+    text-decoration:none;
+  }
+  .hoverable .hover {
+    display:none;
+  }
+  .hoverable:hover .normal {
+    display:none;
+  }
+  .hoverable:hover .hover {
+    display:inline;
+  }
+.marg:hover {
+
+}
 .element-card {
   position: relative;
   width: 30%;
