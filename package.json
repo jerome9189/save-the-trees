@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jerome9189/save-the-trees/issues"
   },
-  "homepage": "https://github.com/jerome9189/save-the-trees#readme"
+  "homepage": "https://github.com/jerome9189/save-the-trees#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }
