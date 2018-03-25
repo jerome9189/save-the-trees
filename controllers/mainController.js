@@ -1,5 +1,6 @@
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({extended: false});
+var currentTime = new Date();
 const precision = 3;
 var count = 0;
 var avgStats = {"trees" : 0.0, "water" : 0.0, "carbon" : 0.0}
@@ -17,6 +18,7 @@ module.exports = function(app) {
                 "carbon" : (parseFloat(parseFloat(avgStats.carbon) + parseFloat(stats.carbon))/parseFloat(count)).toFixed(precision),
               };
     console.log(avgStats);
+    console.log(currentTime.toLocaleString());
     res.render('resource', {data : stats});
     // console.log(req.body.paper);
   });
