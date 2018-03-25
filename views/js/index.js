@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     var miles = $('#miles');
     var paper = $('#paper');
-    var jsonData = {miles: miles.val(), paper: paper.val()};
+    var jsonData = {"miles" : miles.val(), "paper" : paper.val()};
 
     $.ajax({
       type: 'POST',
