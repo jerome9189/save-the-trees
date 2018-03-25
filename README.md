@@ -13,6 +13,10 @@ node index.js
 
 go to localhost:3000/index
 
+![alt text](https://github.com/jerome9189/save-the-trees/blob/master/images/image1.png)
+
+![alt text](https://github.com/jerome9189/save-the-trees/blob/master/images/image2.png)
+
 ## Contributors
   * **Jerome George**
   * **Kartik Arora**
