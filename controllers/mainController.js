@@ -5,10 +5,9 @@ module.exports = function(app) {
     res.render('index');
   });
   app.post('/index',urlencodedParser, function(req, res) {
-    console.log(calculate(req.body.miles, req.body.paper, map));
     //1 sheet = 0.002 Trees, 3 gallons water, 0.009 lb CO2
     //1 mile = 0.900lb CO2, 0,0
-    res.render('index');
+    res.render('resource', {data : calculate(req.body.miles, req.body.paper, map)});
     // console.log(req.body.paper);
   });
   var map = {
@@ -17,7 +16,7 @@ module.exports = function(app) {
   }
 
   function calculate(miles, paper, map) {
-    var precision = 2;
+    var precision = 3;
     var netTrees = (miles * map.miles.trees) + (paper * map.paper.trees);
     var netWater = (miles * map.miles.water) + (paper * map.paper.water);
     var netCarbon = (miles * map.miles.carbon) + (paper * map.paper.carbon);
