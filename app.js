@@ -4,5 +4,5 @@ var mainController = require('./controllers/mainController');
 app.set('view engine', 'ejs');
 app.use(express.static('./views'));
 mainController(app);
-app.listen(3000);
-console.log('Listening to port 3000');
+app.listen(8080);
+console.log('Listening to port 8080');
