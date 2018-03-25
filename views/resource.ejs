@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <!-- <div class="element-card">
-    <div class="front-facing">
-    <h1 class="carbon"><img src = "co2.png" height = "40px" width = "auto"></h1>
-    <p class="treeTitle">Carbon DiOxide</p>
-    <p class="treeTitle2">69</p>
-  </span>
+  <!-- <div class="element-card">
+  <div class="front-facing">
+  <h1 class="carbon"><img src = "co2.png" height = "40px" width = "auto"></h1>
+  <p class="treeTitle">Carbon DiOxide</p>
+  <p class="treeTitle2">69</p>
+</span>
 </div>
 <div class="back-facing">
 <p>Copper is a chemical element with symbol Cu (from Latin: cuprum) and atomic number 29. It is a soft, malleable, and ductile metal with very high thermal and electrical conductivity.</p>
@@ -55,39 +55,52 @@
 </div> -->
 
 <div class="jumbotron" style="background-color:#009688">
-  <h1 class="display-3" style="text-align:center"><b>You have prevented:</b></h1>
+  <h1 class="display-3" style="text-align:center; color:white"><b>You have prevented:</b></h1>
 
 </div>
 <!-- <h1 class="ultimate-header">You prevented : </h1> -->
-  <div class="container">
-<div class="card text-white bg-primary mb-3 d-inline-block marg" style="max-width: 20rem;">
-  <div class="card-header main-header">Wastage of</div>
-  <div class="card-body">
-    <h1 id = "water" class="card-title main-number">69.69</h1>
-    <div class="main-unit">gallons of</div>
+<div class="container">
+  <div class="card text-white bg-primary mb-3 d-inline-block marg containerAni" style="max-width: 20rem;">
+    <div class="card-header main-header">Wastage of</div>
+    <div class="card-body">
+      <h1 id = "water" class="card-title main-number">69.69</h1>
+      <div class="main-unit">gallons of</div>
+    </div>
+    <div class="card-header main-header">Water<i class="em em-droplet"></i></div>
+    <div class="overlay">
+      <div class="card-title overlayFont">The average person directly uses about 100 gallons per day
+      </div>
+    </div>
   </div>
-  <div class="card-header main-header">Water<i class="em em-droplet"></i></div>
-</div>
 
-<div class="card text-white bg-success mb-3 d-inline-block marg" style="max-width: 20rem;">
-  <div class="card-header main-header">Cutting of</div>
-  <div class="card-body">
-    <h1 id="trees" class="card-title main-number" style = "font-size: 110px" >69.69</h1>
+  <div class="card text-white bg-success mb-3 d-inline-block marg containerAni" style="max-width: 20rem;">
+    <div class="card-header main-header">Cutting of</div>
+    <div class="card-body">
+      <h1 id="trees" class="card-title main-number" style = "font-size: 110px" >69.69</h1>
+    </div>
+    <div class="card-header main-header">Trees<i class="em em-evergreen_tree"></i></div>
+    <div class="overlay" style="background-color:Green">
+      <div class="card-title overlayFont">Anywhere between 3.5 billion - 7 billion trees are cut down per year
+      </div>
+    </div>
   </div>
-  <div class="card-header main-header">Trees<i class="em em-evergreen_tree"></i></div>
 
-</div>
-<div class="card text-white bg-dark mb-3 d-inline-block marg" style="max-width: 20rem;">
-  <div class="card-header main-header">Emissions of</div>
-  <div class="card-body">
-    <h1 id="carbon" class="card-title main-number">69.69</h1>
-    <div class="main-unit">lb of</div>
+  <div class="card text-white bg-dark mb-3 d-inline-block marg containerAni" style="max-width: 20rem;">
+    <div class="card-header main-header">Emissions of</div>
+    <div class="card-body">
+      <h1 id="carbon" class="card-title main-number">69.69</h1>
+
+      <div class="main-unit">lb of</div>
+    </div>
+    <div class="card-header main-header">CO<sub>2</sub><i class="em em-cloud"></i></div>
+    <div class="overlay" style="background-color:Black">
+      <div class="card-title overlayFont">The average per capita carbon footprint of a USA is ~ 94 lb per day
+      </div>
+    </div>
   </div>
-  <div class="card-header main-header">CO<sub>2</sub><i class="em em-cloud"></i></div>
-</div>
 </div>
 <form method="get" action="/index" style="text-align:center">
-    <button type="submit" class ="btn-lg btn-primary" >Start over</button>
+  <button type="submit" class ="btn-lg btn-primary" >Start over</button>
 </form>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script  src="js/result.js"></script>
@@ -95,31 +108,31 @@
 <script  src="js/result.js"></script>
 <script src="js/countUp.js"></script>
 <script>
-  var options = {
-  useEasing: true,
-  useGrouping: true,
-  separator: ',',
-  decimal: '.',
+var options = {
+  useEasing: true,
+  useGrouping: true,
+  separator: ',',
+  decimal: '.',
 };
 var demo = new CountUp('carbon', 0, <%= data.carbon %>, 3, 2.5, options);
 if (!demo.error) {
-  demo.start();
+  demo.start();
 } else {
-  console.error(demo.error);
+  console.error(demo.error);
 }
 
 var demo2 = new CountUp('trees', 0, <%= data.trees %>, 3, 2.5, options);
 if (!demo2.error) {
-  demo2.start();
+  demo2.start();
 } else {
-  console.error(demo2.error);
+  console.error(demo2.error);
 }
 
 var demo3 = new CountUp('water', 0, <%= data.water %>, 3, 2.5, options);
 if (!demo3.error) {
-  demo3.start();
+  demo3.start();
 } else {
-  console.error(demo3.error);
+  console.error(demo3.error);
 }
 
 </script>

@@ -59,6 +59,42 @@ body {
   to {opacity: 1;}
 }
 
+.containerAni {
+  position: relative;
+  width: 50%;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+.overlayFont{
+  font-family: 'helvetica', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: white;
+  margin-top: 23%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.containerAni:hover .overlay {
+  opacity: 0.9;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -90,23 +126,7 @@ body {
   margin: 20px;
   border-radius: 15px !important;
 }
-.hoverable {
-    cursor:default;
-    color:#000;
-    text-decoration:none;
-  }
-  .hoverable .hover {
-    display:none;
-  }
-  .hoverable:hover .normal {
-    display:none;
-  }
-  .hoverable:hover .hover {
-    display:inline;
-  }
-.marg:hover {
 
-}
 .element-card {
   position: relative;
   width: 30%;
