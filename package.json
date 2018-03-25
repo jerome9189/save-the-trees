@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jerome9189/save-the-trees#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
     "jquery": "^3.3.1"
   }
 }
