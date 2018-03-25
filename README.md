@@ -8,5 +8,7 @@ Clone the repository using git clone https://github.com/jerome9189/save-the-tree
 
 ## To run locally
 npm install
+
 node index.js
+
 go to localhost:3000/index
