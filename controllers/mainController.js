@@ -4,8 +4,8 @@ module.exports = function(app) {
   app.get('/index', function(req, res) {
     res.render('index');
   })
-  app.post('index', function(req, res) {
-    console.log(req.body.miles);
-    console.log(req.body.paper);
+  app.post('/index',urlencodedParser, function(req, res) {
+    console.log(req.body);
+    // console.log(req.body.paper);
   })
 }
