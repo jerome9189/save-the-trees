@@ -24,5 +24,3 @@ go to localhost:3000/index
   * **Jerome George**
   * **Kartik Arora**
   * **Pranay Mundra**
-  
-  :)
